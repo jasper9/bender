@@ -1,0 +1,1 @@
+web: gunicorn -b 0.0.0.0:$VCAP_APP_PORT main:app
