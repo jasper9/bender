@@ -1,0 +1,16 @@
+gunicorn.error.log
+gunicorn.access.log
+pip-selfcheck.json
+config.ini
+pyvenv.cfg
+/bin
+/include
+/lib
+/lib64
+/__pycache__
+*__pycache__*
+.vscode/*
+/keys
+/runtime
+innkeeper.log
+newrelic.ini
