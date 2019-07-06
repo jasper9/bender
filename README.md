@@ -1,5 +1,6 @@
 # bender
 
+This is just mostly notes until I get a bit further along...
 
 curl https://bender.apps.pcfone.io/api/v1/vmware/vcenter/linux/13010631
 
@@ -11,6 +12,17 @@ curl https://bender.apps.pcfone.io/api/v1/vmware/vcenter/linux/13010631
 	"releaseDate": "Thu, 11 Apr 2019 00:00:00 GMT",
 	"releaseNotes": ""
 }]
+
+curl https://bender.apps.pcfone.io/api/v1/vmware/esxi/9484548
+["esxi", {
+	"build": "9484548",
+	"fullName": "ESXi 6.7 EP 03",
+	"imageprofile": "ESXi-6.7.0-20180804001-standard",
+	"releaseDate": "Tue, 14 Aug 2018 00:00:00 GMT",
+	"releaseName": "ESXi670-201808001",
+	"releaseNotes": "https://kb.vmware.com/kb/56535"
+}]
+
 
 
 Links to document:

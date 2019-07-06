@@ -25,8 +25,48 @@ def home():
     message = "Coming soon...<br><br>"
     message += "<a href='/api/v1/swagger'>Swagger UI</a><br><br>"
     message += "<a href='/doc'>Spectacle UI</a><br><br>"
+    message += "<a href='/example'>Example Usage</a><br><br>"
     title = "Title"
     return render_template("message.html", message=message, title=title)
+
+@app.route("/example")
+def example():
+    from pygments import highlight, lexers, formatters
+    message = "Example:<br><br>"
+    formatter = formatters.HtmlFormatter(full=True)
+    css = formatter.get_style_defs()
+    
+    message += "curl https://bender.apps.pcfone.io/api/v1/vmware/esxi/9484548"
+    
+    obj = {
+	"build": "9484548",
+	"fullName": "ESXi 6.7 EP 03",
+	"imageprofile": "ESXi-6.7.0-20180804001-standard",
+	"releaseDate": "2018-08-14",
+	"releaseName": "ESXi670-201808001",
+	"releaseNotes": "https://kb.vmware.com/kb/56535"
+    }
+    
+    formatted_json = json1.dumps(obj, sort_keys=True, indent=4)
+    
+    colorful_json = highlight(formatted_json, lexers.JsonLexer(), formatters.HtmlFormatter())
+    message += colorful_json
+
+
+    message += "curl https://bender.apps.pcfone.io/api/v1/vmware/vcenter/linux/13010631"
+    
+    obj = "vcenters",{"build":"13010631","build2":"13007421","fullName":"vCenter Server 6.7 Update 2","osType":"linux","releaseDate":"2019-04-11","releaseNotes":""}
+    
+    formatted_json = json1.dumps(obj, sort_keys=True, indent=4)
+    
+    colorful_json = highlight(formatted_json, lexers.JsonLexer(), formatters.HtmlFormatter())
+    message += colorful_json
+
+
+
+    title = "Title"
+    return render_template("message.html", message=message, title=title, css=css)
+
 
 
 

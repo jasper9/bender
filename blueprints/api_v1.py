@@ -19,8 +19,10 @@ api = Api(api_v1,
 model = api.model('Model', {
     'name': fields.String,
 })
+
 # ENDPOINTS ############################################################################################################
 # ######################################################################################################################
+
 @api.route('/vmware/vcenter')
 class vmware_vcenter(Resource):
     @api.response(200, 'Success', model)
@@ -33,6 +35,7 @@ class vmware_vcenter(Resource):
             sql = "select fullName, build, releaseDate, osType, releaseNotes from vmware_vcenter"
             cursor.execute(sql)
             for row in cursor:
+                row['releaseDate'] = row['releaseDate'].strftime("%Y-%m-%d")
                 txt.append(row)
         disconnectDB(db)
         return jsonify(txt)
@@ -52,6 +55,7 @@ class vmware_vcenter_specific_os(Resource):
             sql = "select fullName, build, build2, releaseDate, osType, releaseNotes from vmware_vcenter where osType=%s"
             cursor.execute(sql, (osType))
             for row in cursor:
+                row['releaseDate'] = row['releaseDate'].strftime("%Y-%m-%d")
                 txt.append(row)
         disconnectDB(db)
         return jsonify(txt)
@@ -74,6 +78,7 @@ class vmware_vcenter_specific_os_build(Resource):
             sql = "select fullName, build, build2, releaseDate, osType, releaseNotes from vmware_vcenter where osType=%s and (build=%s or build2=%s)"
             cursor.execute(sql, (osType, build, build))
             for row in cursor:
+                row['releaseDate'] = row['releaseDate'].strftime("%Y-%m-%d")
                 txt.append(row)
         disconnectDB(db)
         return jsonify(txt)
@@ -92,6 +97,7 @@ class vmware_esxi(Resource):
             sql = "select releaseDate, build, releaseName, imageprofile, fullName, releaseNotes from vmware_esxi"
             cursor.execute(sql)
             for row in cursor:
+                row['releaseDate'] = row['releaseDate'].strftime("%Y-%m-%d")
                 txt.append(row)
         disconnectDB(db)
         return jsonify(txt)
@@ -113,6 +119,7 @@ class vmware_esxi_specific_build(Resource):
             sql = "select releaseDate, build, releaseName, imageprofile, fullName, releaseNotes from vmware_esxi where build=%s"
             cursor.execute(sql, (build))
             for row in cursor:
+                row['releaseDate'] = row['releaseDate'].strftime("%Y-%m-%d")
                 txt.append(row)
         disconnectDB(db)
         return jsonify(txt)
