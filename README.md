@@ -1,1 +1,37 @@
 # bender
+
+
+curl https://bender.apps.pcfone.io/api/v1/vmware/vcenter/linux/13010631
+
+["vcenters", {
+	"build": "13010631",
+	"build2": "13007421",
+	"fullName": "vCenter Server 6.7 Update 2",
+	"osType": "linux",
+	"releaseDate": "Thu, 11 Apr 2019 00:00:00 GMT",
+	"releaseNotes": ""
+}]
+
+
+Links to document:
+https://www.virten.net/vmware/vcenter-release-and-build-number-history/#linux
+https://kb.vmware.com/s/article/2143838
+https://esxi-patches.v-front.de/
+https://kb.vmware.com/s/article/2143832
+
+
+Tools:
+https://apiguide.readthedocs.io/en/latest/build_and_publish/documentation.html
+https://github.com/Swagger2Markup/swagger2markup
+https://github.com/sourcey/spectacle
+
+npm install -g spectacle-docs
+
+wget http://localhost:8080/api/v1/swagger.json
+spectacle --target-dir static swagger.json
+rm -f swagger.json
+
+http://localhost:8080/api/v1/doc/
+
+http://localhost:8080/api/v1/swagger.json
+

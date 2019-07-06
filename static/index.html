@@ -1,0 +1,369 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bender: The robot that drinks and knows things | API Reference</title>
+    <link rel="stylesheet" href="stylesheets/foundation.min.css" />
+    <link rel="stylesheet" href="stylesheets/spectacle.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="javascripts/foundation.js"></script> -->
+    <script src="javascripts/spectacle.min.js"></script>
+  </head>
+  <body id="spectacle">
+    <div id="page" class="drawer-layout drawer-slide-right-large">
+      <div id="sidebar">
+        <button class="close-button" aria-label="Close menu" type="button" data-drawer-close>
+          <span aria-hidden="true">×</span>
+        </button>
+        <nav id="nav" role="navigation">
+          <h5>Topics</h5>
+          <a href="#introduction">Introduction</a>
+          <h5>Paths</h5>
+          <!-- <section>
+                <a href="#path--vmware-vcenter">/vmware/vcenter</a>
+                <ul> -->
+          <!-- <li> -->
+          <a href="#operation--vmware-vcenter-get"> GET VMware vCenter Releases </a>
+          <!-- </li> -->
+          <!-- </ul>
+              </section> -->
+          <!-- <section>
+                <a href="#path--vmware-vcenter--osType-">/vmware/vcenter/{osType}</a>
+                <ul> -->
+          <!-- <li> -->
+          <a href="#operation--vmware-vcenter--osType--get"> GET VMware vCenter Releases by OS Type </a>
+          <!-- </li> -->
+          <!-- </ul>
+              </section> -->
+          <!-- <section>
+                <a href="#path--vmware-vcenter--osType---build-">/vmware/vcenter/{osType}/{build}</a>
+                <ul> -->
+          <!-- <li> -->
+          <a href="#operation--vmware-vcenter--osType---build--get"> List a specific release matching an OS type and build number </a>
+          <!-- </li> -->
+          <!-- </ul>
+              </section> -->
+          <h5>Schema Definitions</h5>
+          <a href="#definition-Model"> Model </a>
+        </nav>
+      </div>
+      <div id="docs" class="row collapse expanded drawer" data-drawer>
+        <button class="floating-menu-icon" type="button" data-drawer-slide="right">
+          <span class="hamburger"></span>
+        </button>
+        <div class="example-box doc-content"></div>
+        <article>
+          <h1 class="doc-title">Bender: The robot that drinks and knows things
+            <span>API Reference</span>
+          </h1>
+          <div id="introduction" data-traverse-target="introduction">
+            <div class="doc-row">
+              <div class="doc-copy">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Request Content-Types:
+                    <span>application/json</span>
+                  </h5>
+                  <h5>Response Content-Types:
+                    <span>application/json</span>
+                  </h5>
+                  <h5>Version:
+                    <span>1.0</span>
+                  </h5>
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1>Paths</h1>
+          <span id="path--vmware-vcenter"></span>
+          <div id="operation--vmware-vcenter-get" class="operation panel" data-traverse-target="operation--vmware-vcenter-get">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-default">default</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">GET VMware vCenter Releases</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-path">
+                  <span class="operation-method">GET</span>
+                  <span class="operation-path">/vmware/vcenter</span>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy"> </div>
+              <div class="doc-examples"></div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Model">Model</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>Success</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <span id="path--vmware-vcenter--osType-"></span>
+          <div id="operation--vmware-vcenter--osType--get" class="operation panel" data-traverse-target="operation--vmware-vcenter--osType--get">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-default">default</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">GET VMware vCenter Releases by OS Type</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-path">
+                  <span class="operation-method">GET</span>
+                  <span class="operation-path">/vmware/vcenter/{osType}</span>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">osType:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>OS type, <code>linux</code> or <code>windows</code></p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples"></div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Model">Model</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>Success</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <span id="path--vmware-vcenter--osType---build-"></span>
+          <div id="operation--vmware-vcenter--osType---build--get" class="operation panel" data-traverse-target="operation--vmware-vcenter--osType---build--get">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-default">default</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">List a specific release matching an OS type and build number</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-path">
+                  <span class="operation-method">GET</span>
+                  <span class="operation-path">/vmware/vcenter/{osType}/{build}</span>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">osType:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>OS type, <code>linux</code> or <code>windows</code></p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">build:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <span class="json-property-required"></span>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Build number of the release. Can be either <code>VAMI</code> or <code>client/MOB</code> types. See here:
+                        <a href="https://kb.vmware.com/s/article/2143838">https://kb.vmware.com/s/article/2143838</a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples"></div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="">
+                          <a class="json-schema-ref" href="#/definitions/Model">Model</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>Success</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1>Schema Definitions</h1>
+          <div id="definition-Model" class="definition panel" data-traverse-target="definition-Model">
+            <h2 class="panel-title">
+              <a name="/definitions/Model"></a>Model: object
+              <!-- <span class="json-property-type"><span class="json-property-type">object</span>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <span class="json-property-type">string</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="doc-row no-margin">
+            <div class="doc-copy doc-separator">
+              <a class="powered-by" href="https://sourcey.com/spectacle">Documentation by
+                <span>Spectacle</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

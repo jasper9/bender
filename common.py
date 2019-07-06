@@ -1,7 +1,6 @@
 import pymysql.cursors
 import json as json1
 from flask import Blueprint, jsonify, request, Response
-from flask_restplus import Resource, Api, apidoc, reqparse, fields, Model, abort
 import os
 import configparser
 
