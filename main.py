@@ -32,20 +32,13 @@ def home():
 @app.route("/example")
 def example():
     from pygments import highlight, lexers, formatters
-    message = "Example:<br><br>"
+    message = "Basic examples of how to use the service.  This is how you can get details for exact builds.  There is more ideas to come, most notably a way of finding out if X is compatible if Y, or exactly what is required etc.<br><br>"
     formatter = formatters.HtmlFormatter(full=True)
     css = formatter.get_style_defs()
     
     message += "curl https://bender.apps.pcfone.io/api/v1/vmware/esxi/9484548"
     
-    obj = {
-	"build": "9484548",
-	"fullName": "ESXi 6.7 EP 03",
-	"imageprofile": "ESXi-6.7.0-20180804001-standard",
-	"releaseDate": "2018-08-14",
-	"releaseName": "ESXi670-201808001",
-	"releaseNotes": "https://kb.vmware.com/kb/56535"
-    }
+    obj = ["esxi",{"build":"9484548","fullName":"ESXi 6.7 EP 03","imageprofile":"ESXi-6.7.0-20180804001-standard","releaseDate":"2018-08-14","releaseName":"ESXi670-201808001","releaseNotes":"https://kb.vmware.com/kb/56535"}]
     
     formatted_json = json1.dumps(obj, sort_keys=True, indent=4)
     

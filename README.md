@@ -2,6 +2,9 @@
 
 This is just mostly notes until I get a bit further along...
 
+https://bender.apps.pcfone.io/example
+
+
 curl https://bender.apps.pcfone.io/api/v1/vmware/vcenter/linux/13010631
 
 ["vcenters", {
